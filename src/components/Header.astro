@@ -15,7 +15,7 @@
 
       <!-- Navbar -->
 
-      <nav class="md:ml-auto flex flex-col gap-10 items-center text-base justify-center w-full h-full fixed left-full">
+      <nav class="m-0 flex flex-col gap-10 items-center text-base justify-center bg-black w-full h-full fixed transition-all duration-700 ease-in-out">
         <a class="mr-5 hover:text-gray-900">First Link</a>
         <a class="mr-5 hover:text-gray-900">Second Link</a>
         <a class="mr-5 hover:text-gray-900">Third Link</a>
@@ -27,9 +27,51 @@
         Contato
         </button>
 
-        <div class="menu rounded-full h-12 w-12 bg-black">
-
+        <div class="menu flex flex-col justify-center align-baseline rounded-full h-12 w-12 bg-white cursor-pointer z-20">
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </div>
     </div>
 </header>
+
+<style lang="scss">
+  header {
+    nav {
+    left: -100%;
+    top: 0;
+  }
+  nav.active {
+    left: 0;
+  }
+  }
+  .bar {
+    display: block;
+    width: 1.8rem;
+    height: .16rem;
+    margin: 2px auto;
+    transition: all .3s ease-in-out;
+    background-color: rgb(22, 11, 18);
+  }
+
+  .menu.active .bar:nth-child(1) {
+    transform: translateY(3.2px) rotate(40deg);
+  }
+
+  .menu.active .bar:nth-child(2) {
+    transform: translateY(-3.2px) rotate(-40deg);
+  }
+
+</style>
+
+<script>
+  const hamburger = document.querySelector(".menu");
+  const nav = document.querySelector("nav");
+
+  hamburger.addEventListener('click', openMenu);
+
+  function openMenu() {
+    hamburger.classList.toggle("active")
+    nav.classList.toggle("active")
+  }
+</script>
