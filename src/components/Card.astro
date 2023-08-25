@@ -1,0 +1,24 @@
+---
+interface Props {
+    title: string;
+    initial: string;
+    body: string;
+}
+
+const {title, initial, body} = Astro.props
+---
+
+
+<div class="p-1 md:w-1/2 w-full">
+    <div class="bg-white px-4 py-6 rounded-3xl">
+      <h2 class="title-font font-medium text-3xl text-gray-900">
+        <span>
+            {initial}
+        </span>
+        {title}
+      </h2>
+      <p class="leading-relaxed">
+        {body}
+      </p>
+    </div>
+</div>
