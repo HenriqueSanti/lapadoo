@@ -4,13 +4,13 @@ import Card from '../components/Card.astro'
 
 <section class="text-grey-500 body-font bg-gray-50">
 
-    <div class="flex  px-5 py-2 gap-5 h-full">
+    <div class="flex flex-col md:flex-row  px-5 py-2 gap-5 h-full">
 
       <!-- Headline-->  
-      <div class="lg:text-left text-center p-6 w-1/2">
+      <div class="md:p-6 md:w-1/2">
 
         <!-- Headling -->
-        <div class="flex flex-cols lg:items-start items-center">
+        <div class="flex flex-cols items-start">
           <div class="flex-grow">
             <h2 class="text-gray-900 text-lg lg:text-4xl title-font font-medium mb-3">
                 Shooting Stars
@@ -24,7 +24,7 @@ import Card from '../components/Card.astro'
       </div>
 
       <!-- Cards -->
-      <div class=" flex flex-wrap w-1/2">
+      <div class=" flex flex-wrap md:w-1/2">
         <Card 
             title = 'riamos marcas'
             initial = 'C' 
