@@ -11,13 +11,13 @@ const {title, initial, body} = Astro.props
 
 <div class="p-1 md:w-1/2 w-full">
     <div class="bg-white p-8 rounded-3xl md:aspect-square">
-      <h2 class="title-font font-medium lg:text-4xl md:text-2xl text-xl text-gray-900">
-        <span>
+      <h2 class="title-font font-medium xl:text-4xl text-xl text-gray-900 mb-3">
+        <span class="-mr-1 p-0">
             {initial}
         </span>
         {title}
       </h2>
-      <p class="leading-relaxed">
+      <p class="leading-relaxed text-gray-600">
         {body}
       </p>
     </div>
