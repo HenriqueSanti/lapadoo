@@ -1,0 +1,11 @@
+---
+interface Props {
+    url: string;
+    alt: string;
+}
+
+const {url, alt} = Astro.props
+---
+
+<img alt="gallery" class="w-full h-full object-center block rounded-3xl" src={url} alt={alt}>
+
