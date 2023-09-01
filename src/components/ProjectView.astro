@@ -1,0 +1,54 @@
+---
+interface props {
+    bgUrl: string;
+    bgAlt: string;
+    projectUrl: string;
+    projectAlt: string;
+}
+
+const {bgUrl, bgAlt, projectUrl, projectAlt} = Astro.props
+---
+
+<div class="md:w-1/2 mb-0 rounded-3xl overflow-hidden cursor-pointer parent transition-all duration-300 ease-in-out relative">
+    <img class="object-cover object-center h-full w-full child rounded-3xl transition-all duration-300 easy-in-out" src={bgUrl} alt={bgAlt}>
+
+    <div id="card-body" class="absolute inset-0 w-full h-full flex flex-col justify-center items-center bg-div transition-all duration-300 easy-in-out">
+        <div class="project w-1/2 flex flex-col justify-center text-center items-center hidden">
+            <img class="object-center rounded-xl" src={projectUrl} alt={projectAlt}>
+
+            <div class=" px-6 py-4 bg-lime-300 w-2/3 rounded-full text-lime-950 font-medium mt-4">
+                Ver projeto
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .parent:hover .child {
+        transform: scale(1.3);  
+    }
+
+    .parent:hover .bg-div {
+        backdrop-filter: blur(10px);
+    }
+
+    .project {
+        display: none;
+    }
+</style>
+
+<script>
+    const card = document.querySelector('.parent');
+    const project = document.querySelector('.project');
+
+    card.addEventListener('mouseover', showProject);
+    card.addEventListener('mouseout', hideProject);
+
+    function showProject() {
+        project.style.display = 'flex';
+    }
+
+    function hideProject() {
+        project.style.display = 'none'
+    }
+</script>

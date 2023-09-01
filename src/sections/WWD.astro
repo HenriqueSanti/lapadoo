@@ -1,5 +1,5 @@
 ---
-
+import ProjectView from "../components/ProjectView.astro";
 ---
 
 <section class="text-gray-100 body-font">
@@ -7,9 +7,12 @@
 
       <!-- Image -->
 
-      <div class="md:w-1/2 mb-0 rounded-3xl overflow-hidden">
-        <img alt="feature" class="object-cover object-center h-full w-full" src="https://dummyimage.com/500x500">
-      </div>
+      <ProjectView 
+          bgUrl = 'https://images.unsplash.com/photo-1693185371650-389b0c6184cc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80'
+          bgAlt = 'dummyimage'
+          projectUrl = 'https://dummyimage.com/200x150'
+          projectAlt = 'alt'
+      />
 
 
       <!-- Description -->
