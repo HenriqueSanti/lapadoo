@@ -1,5 +1,5 @@
 ---
-
+import MenuHead from "../components/MenuHead.astro";
 ---
 
 <header class="text-gray-600 body-font">
@@ -15,7 +15,15 @@
 
       <!-- Navbar -->
 
-      <nav class="m-0 flex flex-col gap-10 items-center text-base justify-center bg-black w-full h-full fixed transition-all duration-700 ease-in-out">
+      
+
+      <nav class="m-0 flex flex-col gap-10 items-center text-base justify-center bg-black w-full h-full fixed transition-all duration-700 ease-in-out z-10 ">
+
+        <MenuHead 
+          content="We take your business where it will win hearts with a hands-on approach and an unashamedly organised process."
+        />
+
+
         <a class="mr-5 hover:text-gray-900">First Link</a>
         <a class="mr-5 hover:text-gray-900">Second Link</a>
         <a class="mr-5 hover:text-gray-900">Third Link</a>

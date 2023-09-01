@@ -1,0 +1,13 @@
+---
+interface Props {
+    content: string
+}
+
+const {content} = Astro.props
+---
+
+<div class="px-20 mx-auto">
+    <h3 class="text-6xl">
+        {content}
+    </h3>
+</div>
