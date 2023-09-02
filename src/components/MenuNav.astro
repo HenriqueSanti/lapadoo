@@ -1,3 +1,44 @@
 ---
+interface Props {
+    itemName : string
+    itemUrl: string
+}
 
+const {itemName, itemUrl} = Astro.props;
 ---
+
+<a href={itemUrl} class="flex cursor-pointer text-gray-400 text-4xl transition-all ease-in-out duration-300  link box-border w-full md:w-1/2 px-16 mt-8">
+    <div class="flex justify-between w-full hover:text-lime-300 border-b-2 border-gray-400 hover:border-lime-300 p-4">
+        <div>
+            {itemName}
+        </div>
+        <div class="arrow origin-center -rotate-45">
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+        </div>
+    </div>
+</a>
+
+<!--Custom CSS -->
+<style>
+    .arrow {
+        display: none;
+    }
+</style>
+
+
+<!-- Custom JavaScript -->
+<script>
+    const item = document.querySelector('.link');
+    const arrow = document.querySelector('.arrow');
+
+    item.addEventListener('mouseover', hoverEffect);
+
+    function hoverEffect() {
+        arrow.style.display = 'block'
+    }
+</script>
+
+<!-- ionicons -->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
