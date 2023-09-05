@@ -1,0 +1,32 @@
+---
+interface Props {
+    title: string;
+    initial: string;
+    body: string;
+    imgUrl: string;
+    imgAlt: string;
+}
+
+const {title, initial, body, imgUrl, imgAlt} = Astro.props
+---
+
+
+<div class="flex flex-wrap w-full">
+    <div class="p-1 md:w-1/2 w-full ">
+        <div class= "p-6">
+          <h3 class="title-font font-medium 2xl:text-3xl text-xl text-gray-400 mb-3">
+            <span class="-mr-1 p-0">
+                {initial}
+            </span>
+            {title}
+          </h3>
+          <p class="leading-relaxed text-gray-600">
+            {body}
+          </p>
+        </div>
+    </div>
+    
+    <div class="p-1 md:w-1/2 w-full aspect-square">
+        <img src={imgUrl} alt={imgAlt} class="object-center object-cover w-full">
+    </div>
+</div>

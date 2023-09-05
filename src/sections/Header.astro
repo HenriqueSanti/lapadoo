@@ -1,6 +1,7 @@
 ---
 import MenuHead from "../components/MenuHead.astro";
 import MenuNav from "../components/MenuNav.astro";
+import MenuAbout from "../components/MenuAbout.astro";
 ---
 
 <header class="text-gray-400 body-font">
@@ -48,6 +49,16 @@ import MenuNav from "../components/MenuNav.astro";
           <MenuNav 
             itemName="Blog"
             itemUrl="#"
+          />
+        </div>
+
+        <div class="flex flex-wrap w-full px-16">
+          <MenuAbout 
+            title="m Titulo"
+            initial="U"
+            body="um texto bem bonito"
+            imgUrl="https://dummyimage.com/300"
+            imgAlt="dummyimage"
           />
         </div>
       </nav>
